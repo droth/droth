@@ -1,3 +1,7 @@
 allfiles.tex
 spickzettel.*
 allincludes.*
+*.aux
+*.idx
+*.log
+*.toc
