@@ -6,9 +6,9 @@ dirs="$@"
 for dir in $dirs; do
    echo "\chapter{$dir}"
    for tex in $dir/*.tex; do
-      name="${tex%.tex}"
-      name="${name##$dir/}"
+      include="${tex%.tex}"
+      name="${include##$dir/}"
       echo "\section{$name}"
-      echo "\include{$tex}"
+      echo "\include{$include}"
    done
 done
