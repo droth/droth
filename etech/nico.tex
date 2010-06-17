@@ -1,2 +1,9 @@
 \subsection{Quellentransformation}
-$$UQ = (U1 * \sum{Widerstaende_unten}) / \sum{alle Widerstaende}$$
+\[UQ = \frac{(U1 * \sum{Widerstaende_{unten}})}{\sum{alle Widerstaende}}\]
+
+
+\[RQ = \frac{(\sum{Widerstaende_{unten}} * \sum{Widerstaende_{oben}})}{\sum{alle Widerstaende}}\]
+
+\subsection{Quellentransformation mit Dioden}
+\[UQ = \frac{((U1-\sum{UF_{Dioden}} * \sum{Widerstaende_{unten}})}{\sum{alle Widerstaende}} + \sum{UF_{Dioden}}\]
+\[RQ = \frac{(\sum{Widerstaende_{unten}} * \sum{Widerstaende_{oben}})}{\sum{alle Widerstaende}}\]
