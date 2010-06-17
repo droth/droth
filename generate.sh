@@ -1,8 +1,7 @@
 #!/bin/sh
 # Nico Schottelius, 2010-06-17
 
-#set -x
-dirs="numerik-1 numerik-2"
+dirs="$@"
 
 for dir in $dirs; do
    echo "\section{$dir}"

@@ -1,7 +1,7 @@
 HEADER=header.tex
 FOOTER=footer.tex
 
-DIRS=numerik-1 numerik-2
+DIRS=numerik-1 numerik-2 physik etech algodat swdev
 
 SRC=spickzettel.tex
 DST=spickzettel.pdf
@@ -17,4 +17,4 @@ $(SRC): $(HEADER) allincludes.tex $(FOOTER)
 	cat $^ > $@
 
 allincludes.tex: $(DIRS)
-	./generate.sh > $@
+	./generate.sh $^ > $@
