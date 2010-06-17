@@ -4,11 +4,11 @@
 dirs="$@"
 
 for dir in $dirs; do
-   echo "\section{$dir}"
+   echo "\chapter{$dir}"
    for tex in $dir/*.tex; do
       name="${tex%.tex}"
       name="${name##$dir/}"
-      echo "\subsection{$name}"
+      echo "\section{$name}"
       echo "\include{$tex}"
    done
 done
