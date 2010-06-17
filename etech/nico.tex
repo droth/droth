@@ -1,3 +1,17 @@
+\subsection{Strom/Spannungsquellen}
+\begin{itemize}
+\item ideale ... = Bleibt immer gleich
+\end{itemize}
+% ------------------------------------------------------------------------------ 
+\subsection{Dioden/LEDs}
+\begin{itemize}
+\item Dioden == LEDs (für uns)
+\item LEDs == die Dinger mit Pfeilen dran
+\item Können Strom sperren (wenn Pfeil entgegen Stromrichtung)
+\item "`Haben keinen Widerstand"' (Strom kann nur via Knotengleichung bestimmt werden)
+\item Ideale Spannungsquelle
+\end{itemize}
+% ------------------------------------------------------------------------------ 
 \subsection{Quellentransformation}
 \[UQ = \frac{(U1 * \sum{Widerstaende_{unten}})}{\sum{alle Widerstaende}}\]
 
@@ -7,3 +21,23 @@
 \subsection{Quellentransformation mit Dioden}
 \[UQ = \frac{((U1-\sum{UF_{Dioden}} * \sum{Widerstaende_{unten}})}{\sum{alle Widerstaende}} + \sum{UF_{Dioden}}\]
 \[RQ = \frac{(\sum{Widerstaende_{unten}} * \sum{Widerstaende_{oben}})}{\sum{alle Widerstaende}}\]
+% ------------------------------------------------------------------------------ 
+\subsection{Bi-Polar-Transistor}
+\[I_e = I_b * (B+1)\]
+\[I_e = I_c + I_b <=> I_c = I_e - I_b\]
+
+\begin{itemize}
+\item Basis-Kreis und Emitterkreis können unabhängig voneinander berechtnet werden
+\item $I_{c}$ ist eine ideale Stromquelle
+\end{itemize}
+Bestimmung von $I_b$ durch "`alle Spannungen durch Widerstände"':
+\[U_Q = U_{RQ} + U_{basis-widerstaende} + U_{be} + U_{emmiter-widerstaende}\]
+Umstellen, Ströme und Widerstände Einsetzen:
+\[U_Q - U_{be} = I_b * R_q + I_b * basis-widerstaende + I_e * emmiter-widerstaende\]
+$I_e$ nach $I_b$ auflöse:
+\[U_Q - U_{be} = I_b * R_q + I_b * basis-widerstaende + I_b * (B+1) * emmiter-widerstaende\]
+Nach $I_b$ auflöse:
+\[\frac{U_Q - U_{be}}{R_q + basis-widerstaende + ((B+1) * emmiter-widerstaende)} = I_b\]
+
+Wenn noch Dioden im Spiel sind: Ganz normal wieder von der Spannung abziehen.
+Danach $I_{c}$  und $I_{e}$ bestimmen, wie oben angegeben.
