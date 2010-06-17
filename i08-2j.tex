@@ -1,18 +1,13 @@
 \documentclass{book}
 \usepackage{makeidx}
-
-%Passende Style-Vorlage einbinden: opensourcepress.sty -- Arbeitsstyle
-%                                  osp*.sty -- Endlayout
-\IfFileExists{osp-intern/osp_v2-1.sty}{\usepackage{osp-intern/osp_v2-1}}{\usepackage{autorenhinweise/opensourcepress}}
+\usepackage[utf8]{inputenc}
 
 \makeindex
 
 \begin{document}
 
 \tableofcontents
-
-% Alle Notizen zu Numerik
-\include{}
+\include{allincludes}
 
 \printindex
 \end{document}

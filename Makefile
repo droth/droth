@@ -1,5 +1,8 @@
 HEADER=header.tex
 FOOTER=footer.tex
+
+DIRS=numerik-1 numerik-2
+
 SRC=spickzettel.tex
 DST=spickzettel.pdf
 
@@ -10,8 +13,8 @@ $(DST): $(SRC)
 	pdflatex $(SRC)
 	pdflatex $(SRC)
 
-$(SRC): $(HEADER) $(FOOTER) allincludes.tex
-	echo cat $^ > $@
+$(SRC): $(HEADER) allincludes.tex $(FOOTER)
+	cat $^ > $@
 
-allincludes.tex:
+allincludes.tex: $(DIRS)
 	./generate.sh > $@
