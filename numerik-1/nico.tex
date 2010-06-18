@@ -2,6 +2,8 @@
 \subsection{Allgemein}
 \begin{itemize}
 \item $x_0$ "`sinnvoll"' wählen
+\item direkte Verfahren: Exaktes Ergebnis nach endlichen Anzahl Rechenschritten
+\item iterative Verfahren: Lösung, die gegen Ergebnis konvergiert
 \end{itemize}
 
 \subsection{Bisektionsverfahren, S. 18}
@@ -63,3 +65,45 @@ a-posterori:
 \[x_{n+1} = x_n - \frac{x_n-x_{n-1}}{f(x_n) - f(x_{n-1})} \cdot f(x_n)\]
 
 
+\subsection{Gauss-Algorithmus, S.33}
+\begin{itemize}
+\item Grundidee:
+\begin{itemize}
+\item Obere Dreiecksmatrix
+\item Einsetzen von unten nach oben
+\end{itemize}
+\item direktes Verfahren
+\end{itemize}
+
+Vorgehen obere Dreiecksmatrix:
+\begin{itemize}
+\item Gehe durch die Spalten von \textbf{1} bis \textbf{n-1}
+\begin{itemize}
+\item Wenn Diagonalelement = 0, dann nichts machen
+\item Wenn andere Zeile dort 0 hat, Zeile vertauschen
+\item Ansonsten:
+\begin{itemize}
+\item $j = spalte + 1, ..., n$
+\item $z_j := z_j - \frac{a_{jspalte}}{a_{spaltespalte}} \cdot z_{spalte}$
+\end{itemize}
+\end{itemize}
+\end{itemize}
+Einsetzen:
+
+\subsection{Vektor- und Matrixnormen, S. 45}
+Dort zu finden :-)
+
+\subsection{Matrizenzerlegung (A = L + D + R) sowie $D^{-1}$, S.50}
+Super einfach: Die Matrix wird zerschnitten und
+\begin{itemize}
+\item L = links untere
+\item D = Diagonalmatrix
+\item R = rechts obere
+\end{itemize}
+
+$$D^{-1}$ ist trivial: Kehrwert ($1/a_{ii})
+
+\subsection{Jacobi-Verfahren, S. 51}
+
+\[D{x^{(n+1)}} = - (L+R) \cdot x^{(n)} + b\]
+\[{x^{(n+1)}} = -D^{-1} (L+R) \cdot x^{(n)} + D^{-1} b\]
