@@ -18,3 +18,8 @@ $(SRC): $(HEADER) allincludes.tex $(FOOTER)
 
 allincludes.tex: $(DIRS)
 	./generate.sh $^ > $@
+
+analysis-1.pdf: analysis-1.tex
+	pdflatex $@
+	pdflatex $@
+	pdflatex $@
