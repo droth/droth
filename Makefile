@@ -6,7 +6,7 @@ DIRS=numerik-1 numerik-2 physik etech algodat swdev
 SRC=spickzettel.tex
 DST=spickzettel.pdf
 
-all: $(DST)
+all: $(DST) analysis-1.pdf
 
 $(DST): $(SRC)
 	pdflatex $(SRC)
@@ -19,7 +19,5 @@ $(SRC): $(HEADER) allincludes.tex $(FOOTER)
 allincludes.tex: $(DIRS)
 	./generate.sh $^ > $@
 
-analysis-1.pdf: analysis-1/analysis-1.tex
-	pdflatex $^
-	pdflatex $^
-	pdflatex $^
+analysis-1.pdf:
+	cd analysis-1 && $(MAKE)
