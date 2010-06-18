@@ -1,14 +1,44 @@
 \subsection{LR-Zerlegung, S. ?pageIdx?}
 
 \begin{itemize}
-\item Alle diagonale Elemente der Matrix $L$ entsprechen dem Wert $1$
-\item Alle werte oberhald der Diagonalen entsprechen dem Wert $0$ 
+\item Alle diagonal Elemente der Matrix $L$ entsprechen dem Wert $1$
+\item Alle werte oberhalb der Diagonalen entsprechen dem Wert $0$ 
 \item $L$ erhalten wir durch die Gauss-Zerlegung, dabei wird das $element_{x,y}$ mit dem inversen Wert der Gauss-Elemations-Anweisung befüllt (siehe Beispiel)
 \item $R$ erhalten wir durch die Matrix-Multiplikation $L\cdot A$
+\item $L \cdot y = b \Rightarrow $ rückwärtseinsetzen um $y$ zu erhalten
+\item $R \cdot x = y \Rightarrow $ vorwärtseinsetzen um $x$ zu erhalten
 \end{itemize}
 
 \subsubsection{Beispiel}
-\[ \left( \begin{array}{ccc}
-a & b & c \\
-d & e & f \\
-g & h & i \end{array} \right)\]
+\textbf{Achtung bei Gauss muss der Vektor $b$ auch berechnet werden!!!}
+\[ A= \left( \begin{array}{ccc}
+200 & 150 & 100\\
+50 & 30 & 20\\
+20 & 10 & 0 \end{array}\right) \quad \quad \quad L= \left( \begin{array}{ccc}
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 1\end{array} \right) \]
+
+\[ z_2 = z_2 - \frac{50}{200} \cdot z_1 \Rightarrow \left( \begin{array}{ccc}
+200 & 150 & 100\\
+0 & -7.5 & -5\\
+20 & 10 & 0 \end{array}\right) \quad \quad \quad L= \left( \begin{array}{ccc}
+1 & 0 & 0\\
+0.25 & 1 & 0\\
+0 & 0 & 1\end{array} \right) \]
+
+\[ z_3 = z_3 - \frac{20}{200} \cdot z_1 \Rightarrow \left( \begin{array}{ccc}
+200 & 150 & 100\\
+0 & -7.5 & -5\\
+0 & -5 & -10 \end{array}\right) \quad \quad \quad L= \left( \begin{array}{ccc}
+1 & 0 & 0\\
+0.25 & 1 & 0\\
+0.1 & 0 & 1\end{array} \right) \]
+
+\[ z_3 = z_3 - \frac{-5}{-7.5} \cdot z_2 \Rightarrow \left( \begin{array}{ccc}
+200 & 150 & 100\\
+0 & -7.5 & -5\\
+0 & 0 & -6\frac{2}{3} \end{array}\right) \quad \quad \quad L= \left( \begin{array}{ccc}
+1 & 0 & 0\\
+0.25 & 1 & 0\\
+0.1 & \frac{2}{3} & 1\end{array} \right) \]
