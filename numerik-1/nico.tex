@@ -1,1 +1,46 @@
-Hier wäre mein Inhalt!
+\subsection{Bisektionsverfahren, S. 18}
+
+\begin{itemize}
+\item Für Nullstelle: 2 Punkte wählen, $x_1$ mit $y_1 > 0$ und $x_2$ mit $y_2 < 0$
+\item Allgemein: Für a-Stelle: 2 Punkte wählen, $x_1$ mit $y_1 > a$ und $x_2$ mit $y_2 < a$
+\end{itemize}
+\[x3 = \frac{x_1 + x_2}{2}\]
+
+\begin{itemize}
+\item $if(f(x3)) > 0$
+\begin{itemize}
+\item $x_1$ = $x_3$
+\end{itemize}
+\item else
+\begin{itemize}
+\item $x_2$ = $x_3$
+\end{itemize}
+\end{itemize}
+
+\subsection{Fixpunktiteration, S. 21, S.23}
+\begin{itemize}
+\item Ausgangsformel umstellen nach $x = $, das ergibt $F(x)$
+\item $x_0$ "`sinnvoll"' wählen
+\end{itemize}
+\[x_{n+1} = F(x_n)\]
+
+Nachschauen, ob Fixpunkt an- oder abstossend ist:
+\begin{itemize}
+\item konvergiert (anziehend): $|F'(x)| < 1$
+\item abstossend: $|F'(x)| > 1$
+\end{itemize}
+
+
+\subsubsection{Fehlerabschätzung}
+
+\begin{itemize}
+\item $x_n$ = iterierte Wert
+\item a-priori: Anzahl benötigte Schritte für Fehlergenauigkeit
+\item a-posterori: Fehler nach n Iterierungen bestimmen
+\end{itemize}
+
+a-priori:
+\[|x_n - \overline{x}| \leq{} \frac{a^n}{1 - a} * |x_1 - x_0|\]
+
+a-posterori:
+\[|x_n - \overline{x}| \leq{} \frac{a}{1 - a} * |x_n - x_{n-1}|\]
