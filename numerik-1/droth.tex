@@ -11,34 +11,38 @@
 
 \subsubsection{Beispiel}
 \textbf{Achtung bei Gauss muss der Vektor $b$ auch berechnet werden!!!}
+\[ z_i = z_i - \frac{a_{i,i}}{a_{j,i}} \cdot z_j \Rightarrow a_{j,i}=0; l_{j,i}=\frac{a_{i,i}}{a_{j,i}}\]
+
+
 \[ A= \left( \begin{array}{ccc}
 200 & 150 & 100\\
 50 & 30 & 20\\
-20 & 10 & 0 \end{array}\right) \quad \quad \quad L= \left( \begin{array}{ccc}
+20 & 10 & 0 \end{array}\right); L= \left( \begin{array}{ccc}
 1 & 0 & 0\\
 0 & 1 & 0\\
 0 & 0 & 1\end{array} \right) \]
 
-\[ z_2 = z_2 - \frac{50}{200} \cdot z_1 \Rightarrow \left( \begin{array}{ccc}
+\[ z_2 = z_2 - \frac{50}{200} \cdot z_1 = z_2 - 0.25 \cdot z_1 \Rightarrow \left( \begin{array}{ccc}
 200 & 150 & 100\\
 0 & -7.5 & -5\\
-20 & 10 & 0 \end{array}\right) \quad \quad \quad L= \left( \begin{array}{ccc}
+20 & 10 & 0 \end{array}\right); L= \left( \begin{array}{ccc}
 1 & 0 & 0\\
 0.25 & 1 & 0\\
 0 & 0 & 1\end{array} \right) \]
 
-\[ z_3 = z_3 - \frac{20}{200} \cdot z_1 \Rightarrow \left( \begin{array}{ccc}
+\[ z_3 = z_3 - \frac{20}{200} \cdot z_1 = z_3 - 0.1 \cdot z_1 \Rightarrow \left( \begin{array}{ccc}
 200 & 150 & 100\\
 0 & -7.5 & -5\\
-0 & -5 & -10 \end{array}\right) \quad \quad \quad L= \left( \begin{array}{ccc}
+0 & -5 & -10 \end{array}\right); L= \left( \begin{array}{ccc}
 1 & 0 & 0\\
 0.25 & 1 & 0\\
 0.1 & 0 & 1\end{array} \right) \]
 
-\[ z_3 = z_3 - \frac{-5}{-7.5} \cdot z_2 \Rightarrow \left( \begin{array}{ccc}
+\[ z_3 = z_3 - \frac{-5}{-7.5} \cdot z_2 = z_3 - \frac{2}{3} \cdot z_2 \Rightarrow \left( \begin{array}{ccc}
 200 & 150 & 100\\
 0 & -7.5 & -5\\
-0 & 0 & -6\frac{2}{3} \end{array}\right) \quad \quad \quad L= \left( \begin{array}{ccc}
+0 & 0 & -6\frac{2}{3} \end{array}\right); L= \left( \begin{array}{ccc}
 1 & 0 & 0\\
 0.25 & 1 & 0\\
 0.1 & \frac{2}{3} & 1\end{array} \right) \]
+
