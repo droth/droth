@@ -93,7 +93,7 @@ Einsetzen:
 \subsection{Vektor- und Matrixnormen, S. 45}
 Dort zu finden :-)
 
-\subsection{Matrizenzerlegung (A = L + D + R) sowie $D^{-1}$, S.50}
+\subsection{Matrizenzerlegung (A = L + D + R) sowie $D^{-1}$, S.50, S.52}
 Super einfach: Die Matrix wird zerschnitten und
 \begin{itemize}
 \item L = links untere
@@ -109,4 +109,8 @@ $D^{-1}$ ist trivial: Kehrwert für jedes Element: $1/a_{ii}$
 \[{x^{(n+1)}} = -D^{-1} (L+R) \cdot x^{(n)} + D^{-1} b\]
 
 $D^{-1}$, L, R aus vorherigem Kapitel, b muss gegeben sein,
-$-D^{-1}$ ist die Negierung.
+$-D^{-1}$ ist die Negierung. Berechnung in Einzelteilen:
+
+\[
+x_j^{(m+1)} = \frac{1}{a_{jj}} \left( b_j - \displaystyle\sum\limits_{k=1, k \neq j}^n a_{jk}x_{k}^{(m)} \right) \quad j = 1, ..., n
+\]
